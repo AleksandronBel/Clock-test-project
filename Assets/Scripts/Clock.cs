@@ -24,6 +24,11 @@ public class Clock : MonoBehaviour
 
     private void Update()
     {
+        UpdateTime();
+    }
+
+    private void UpdateTime()
+    {
         TimeSpan elapsedTime = DateTime.Now - _previousTime;
 
         DateTime currentTime = CurrentTime.Add(elapsedTime);
